@@ -1,6 +1,7 @@
 from src.model import State
 from langgraph.graph import StateGraph, START
 from langchain.chat_models import init_chat_model
+from src.memory import memory
 
 
 graph_builder = StateGraph(State)
@@ -23,4 +24,4 @@ graph_builder.add_node("chatbot", chatbot)
 
 graph_builder.add_edge(START, "chatbot")
 
-graph = graph_builder.compile()
+graph = graph_builder.compile(checkpointer=memory)
