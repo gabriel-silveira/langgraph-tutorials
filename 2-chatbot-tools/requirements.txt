@@ -1,0 +1,6 @@
+langgraph
+langsmith
+langchain[openai]
+langchain-tavily
+python-dotenv
+ipython
