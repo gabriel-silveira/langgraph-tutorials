@@ -3,4 +3,4 @@ langgraph
 langgraph-supervisor
 langchain-tavily
 langchain[openai]
-langchain-tavily
+langgraph_supervisor
