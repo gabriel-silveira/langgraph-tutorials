@@ -1,4 +1,4 @@
-from src.supervisor import supervisor
+from src.agents.supervisor_with_agents import supervisor
 from src.services.pretty_print import pretty_print_messages
 
 
