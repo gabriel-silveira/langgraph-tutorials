@@ -1,17 +1,12 @@
 from langgraph.prebuilt import create_react_agent
 from src.tools.math_tools import add, multiply, divide
 from src.llm import llm
+from src.prompts.agent_prompt import agent_prompt
 
 
 math_agent = create_react_agent(
     model=llm,
     tools=[add, multiply, divide],
-    prompt=(
-        "You are a math agent.\n\n"
-        "INSTRUCTIONS:\n"
-        "- Assist ONLY with math-related tasks\n"
-        "- After you're done with your tasks, respond to the supervisor directly\n"
-        "- Respond ONLY with the results of your work, do NOT include ANY other text."
-    ),
+    prompt=agent_prompt,
     name="math_agent",
 )
